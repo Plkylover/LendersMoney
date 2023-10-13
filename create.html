@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="create.css">
+</head>
+<body>
+<form>
+  <input type="text" placeholder="Name">
+  <input type="text" placeholder="Total Amount">
+  <div class="common" style="display: none;" id="identifier">
+    <div class="selector">Gave</div>
+    <div class="selector">Received</div>
+  </div>
+  <input type="text" placeholder="Left Amount">
+  <div class="common">
+    <label style="margin-right: 1vw;">Date</label>
+    <input type="date">
+  </div>
+  <div class="common"><button>Submit</button><button style="background-color: navajowhite;margin-left: 1vw;" onclick="cancel()">Cancel</button></div>
+  <label id="err"></label>
+</form>
+<script src="create.js"></script>
+</body>
+</html>

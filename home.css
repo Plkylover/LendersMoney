@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+header{
+  width: 100%;
+  height: 10vw;
+  border: 0.3vw solid navy;
+}
+nav{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: mediumblue;
+}
+.tabs{
+  width: 100%;
+  height: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.5vw solid wheat;
+}
+.tab{
+  margin: 0 2vw;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: cornflowerblue;
+  transition: border .5s ease;
+}
+.active{
+  border-bottom: 0.5vw solid navy;
+}
+.frag{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+.debt{
+  width: 100%;
+  height: 20vw;
+  border: 2px solid aqua;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1.5vw;
+}
+.debt div{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: mediumslateblue;
+}
+.debt div *{
+  margin: 0 1vw;
+}
+.debt button{
+  padding: 1vw;
+  height: 120%;
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5vw;
+  background-color: mediumslateblue;
+  color: white;
+  outline: none;
+  border: none;
+}
+.button{
+width: 30vw;
+padding: 3vw;
+border-radius: 5vw;
+background-color: royalblue;
+color: white;
+outline: none;
+border: none;
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin: 2vw auto;
+}
+.popup-container{
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.popup{
+  background: white;
+  height: 60vw;
+  width: 60vw;
+  box-shadow: 0 0 5vw whitesmoke;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 3vw;
+}
+.popup input{
+  outline: none;
+  border: 0.3vw solid darkgrey;
+  color: navy;
+  border-radius: 2vw;
+  padding: 2vw;
+  margin-bottom: 3vw;
+}
+.popup button{
+  padding: 1vw;
+  height: 7vw;
+  width: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5vw;
+  background-color: mediumslateblue;
+  color: white;
+  outline: none;
+  border: none;
+}
+input{
+  outline: none;
+  border: 0.3vw solid darkgrey;
+  color: navy;
+  border-radius: 2vw;
+  padding: 1vw;
+  margin: 2.5vw 0;
+}
+#err{
+  color: red;
+  display: none;
+}
+.common{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+div svg{
+  margin-left: 1vw;
+}
+footer{
+  background-color: cornflowerblue;
+  color: white;
+  position: sticky;
+  top: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 10vw;
+}
+footer button{
+  font-size: 3vw;
+  border: none;
+  outline: none;
+  color: red;
+  background-color: transparent;
+}
+footer button *{
+  margin: 0 1vw;
+}
+/*Details section */
+#detailNav{
+  color: white;
+  justify-content: flex-start;
+  background-color: royalblue;
+}
+#detailNav *{
+  margin: 0 3vw;
+}
+#detailNav button{
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: white;
+}
+/* Reaponsive Section */
+@media only screen and (min-width:800px){
+  body{
+    font-size: 1.3em;
+  }
+  .button{
+    width: 25vw;
+    padding: 1.5vw;
+    font-size: 1.1em;
+  }
+  .button svg{
+    height: 3vw;
+    width: 3vw;
+  }
+  input{
+    width: 50%;
+  }
+  .active{
+    border-bottom: 0.3vw solid navy;
+  }
+  footer button svg{
+    height: 10%;
+    width: 10%;
+  }
+  #detailNav svg{
+    height: 7vw;
+    width: 7vw;
+  }
+}

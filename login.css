@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(cornflowerblue, lightblue, #007FFF);
+  font-family: 'Ubuntu', sans-serif;
+}
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vw;
+  width: 70vw;
+  border: 0.3vw solid red;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 2vw;
+}
+.choose{
+  height: 7vw;
+  width: 40vw;
+  border: 2px solid darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3vw 0;
+  border-radius: 2vw;
+  overflow: hidden;
+}
+.btns{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3vw;
+}
+.active{
+  background: royalblue;
+  color: white;
+}
+input{
+  outline: none;
+  border: 0.3vw solid darkgrey;
+  color: navy;
+  border-radius: 2vw;
+  padding: 2vw;
+  margin-bottom: 3vw;
+}
+button{
+  border-radius: 2vw;
+  padding: 2vw;
+  margin-bottom: 3vw;
+  outline: none;
+  border: none;
+  background-color: royalblue;
+  color: white;
+  width: 60%;
+}
+label{
+  color: red;
+  display: none;
+}
+@media only screen and (min-width:800px){
+  body{
+    font-size: 1.4em;
+  }
+  form{
+    height: 70vw;
+    width: 60vw;
+  }
+  button{
+    width: 45%;
+  }
+  input{
+    width: 50%;
+  }
+  .choose{
+    height: 5vw;
+    width: 35vw;
+  }
+}

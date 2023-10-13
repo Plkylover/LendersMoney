@@ -1,0 +1,74 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+form{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70vw;
+  width: 70vw;
+  box-shadow: 0 0 5vw yellow;
+  margin: auto;
+}
+input{
+  padding: 1vw;
+  border-radius: 3vw;
+  outline: none;
+  border: 0.5vw solid wheat;
+  width: 60%;
+}
+#err{
+  display: none;
+  color: red;
+  font-size: 1em;
+}
+button{
+  padding: 2vw;
+  border-radius: 2vw;
+  border: none;
+  outline: none;
+  background-color: gold;
+  color: white;
+}
+.selector{
+  padding: 2vw;
+  border: 0.3vw solid whitesmoke;
+  border-radius: 2vw;
+  outline: none;
+  background-color: white;
+  color: gray;
+}
+.common{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.active{
+  color: royalblue;
+  border: 0.3vw solid royalblue;
+}
+@media only screen and (min-width: 800px){
+  input{
+    width: 50%;
+  }
+  form{
+    height: 60vw;
+    width: 60vw;
+  }
+  button, .selector{
+    width: 15%;
+    padding: 1vw;
+  }
+  #err{
+    font-size: 1.3em;
+  }
+}
