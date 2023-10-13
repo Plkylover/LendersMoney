@@ -119,7 +119,7 @@ button.addEventListener("click",()=>{
   }
 }
 else{
-  if (name.value.trim() == '' || email.value.trim() == '' || password.value.trim() == '') {
+  if (email.value.trim() == '' || password.value.trim() == '') {
     commonErr.innerHTML = "Enter values in name or email or password"
     commonErr.style.display = 'block'
   }
