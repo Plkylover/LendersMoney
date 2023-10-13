@@ -119,6 +119,11 @@ button.addEventListener("click",()=>{
   }
 }
 else{
+  if (name.value.trim() == '' || email.value.trim() == '' || password.value.trim() == '') {
+    commonErr.innerHTML = "Enter values in name or email or password"
+    commonErr.style.display = 'block'
+  }
+  else{
   const dbref = ref(database)
   let index = email.value.indexOf("@")
   let str = email.value.slice(0, index)
@@ -141,5 +146,6 @@ else{
       commonErr.style.display = 'block'
     }
   })
+}
 }
 })
