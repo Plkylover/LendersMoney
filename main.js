@@ -138,7 +138,7 @@ else{
       location.href = 'home.html'
     }
     else{
-      throw new Error()
+      throw new Error("you got an err")
     }
     }
     catch{
