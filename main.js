@@ -130,11 +130,11 @@ else{
   get(child(dbref, "usersDetails/"+str)).then((snapshot)=>{
     try{
     if (snapshot.val().email == email.value && snapshot.val().password == password.value) {
+      localStorage.setItem("logined", "true")
+      localStorage.setItem("user", str)
       name.value = ''
       email.value = ''
       password.value = ''
-      localStorage.setItem("logined", "true")
-      localStorage.setItem("user", str)
       location.href = 'home.html'
     }
     else{
