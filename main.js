@@ -119,29 +119,35 @@ button.addEventListener("click",()=>{
   }
 }
 else{
-  const dbref = ref(database)
-  let index = email.value.indexOf("@")
-  let str = email.value.slice(0, index)
-  get(child(dbref, "usersDetails/"+str)).then((snapshot)=>{
-    if (snapshot.val().email == email.value && snapshot.val().password == password.value) {
-      localStorage.setItem("logined", "true")
-      localStorage.setItem("user", str)
-      name.value = ''
-      email.value = ''
-      password.value = ''
-      location.href = 'home.html'
-    else{
-      commonErr.innerHTML = 'your email or password is wrong'
-      commonErr.style.display = 'block'
-      name.value = ''
-      email.value = ''
-      password.value = ''
-    }
-  })
   if (name.value.trim() == '' || email.value.trim() == '' || password.value.trim() == '') {
     commonErr.innerHTML = "Enter values in name or email or password"
     commonErr.style.display = 'block'
     err = true
   }
+  const dbref = ref(database)
+  let index = email.value.indexOf("@")
+  let str = email.value.slice(0, index)
+  get(child(dbref, "usersDetails/"+str)).then((snapshot)=>{
+    try{
+    if (snapshot.val().email == email.value && snapshot.val().password == password.value) {
+      name.value = ''
+      email.value = ''
+      password.value = ''
+      localStorage.setItem("logined", "true")
+      localStorage.setItem("user", str)
+      location.href = 'home.html'
+    }
+    else{
+      throw new Error()
+    }
+    }
+    catch{
+      name.value = ''
+      email.value = ''
+      password.value = ''
+      commonErr.innerHTML = 'your email or password is wrong'
+      commonErr.style.display = 'block'
+    }
+  })
 }
 })
