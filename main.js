@@ -123,7 +123,6 @@ else{
   let index = email.value.indexOf("@")
   let str = email.value.slice(0, index)
   get(child(dbref, "usersDetails/"+str)).then((snapshot)=>{
-    try{
     if (snapshot.val().email == email.value && snapshot.val().password == password.value) {
       localStorage.setItem("logined", "true")
       localStorage.setItem("user", str)
@@ -131,12 +130,7 @@ else{
       email.value = ''
       password.value = ''
       location.href = 'home.html'
-    }
     else{
-      throw new Error("you got an err")
-    }
-    }
-    catch{
       commonErr.innerHTML = 'your email or password is wrong'
       commonErr.style.display = 'block'
       name.value = ''
