@@ -57,7 +57,7 @@ if (!(sessionStorage.getItem("location") == "Receipt")){
       date.value = ''
     }
     else if (sessionStorage.getItem("location") == "Moneygiven") {
-      sessionStorage.setItem("new", `<div class='debt'><div><h2>${name.value.trim()}</h2><h4>left Amount: ₹ ${leftA.value.trim()}</h4></div><div><h4>Total Amount: ₹ ${totalA.value.trim()}</h4><button class='add'>Add</button><button class='paid'>Paid</button></div></div>`)
+      sessionStorage.setItem("new", `<div class='debt'><div><h2>${name.value.trim()}</h2><h4>left Amount: ₹ ${leftA.value.trim()}</h4><p hidden>${date.value}</p></div><div><h4>Total Amount: ₹ ${totalA.value.trim()}</h4><button class='add'>Add</button><button class='paid'>Paid</button></div></div>`)
       sessionStorage.setItem("receipt", `<div class='debt'><div><h2>${name.value.trim()}</h2><h4>Date: ${date.value.split("-").reverse().join("/").trim()}</h4></div><div><h4>Given: ₹${leftA.value.trim()}</h4></div></div>`)
       name.value = ''
       totalA.value = ''
@@ -110,4 +110,4 @@ else {
 const cancel = () =>{
   event.preventDefault()
   location.href = 'home.html'
-}
+      }
